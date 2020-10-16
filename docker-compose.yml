@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    campi-image-wildfly:
+        ports:
+            - '8080:8080'
+            - '9990:9990'
+            - '8009:8009'
+        container_name: wildfly-campi
+        volumes:
+            - '${PWD}/:/opt/jboss/wildfly/standalone/deployments/'
+        image: campi-image-wildfly
